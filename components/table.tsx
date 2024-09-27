@@ -1,0 +1,110 @@
+const users = [
+  {
+    reserveId: '',
+    entryDate: '',
+    Service: [
+      {
+        serviceId: '',
+        profession: '',
+      },
+    ],
+    Patient: {
+      firstname: '',
+      lastname: '',
+      phone: 0,
+    },
+  },
+];
+
+import React, { useEffect, useState } from 'react';
+
+import { useGraph } from '@/lib/graphRequest';
+
+const GET_SERVICE = `
+  query Reserves {
+    Reserves {
+        reserveId
+        entryDate
+        Service {
+            serviceId
+            profession
+        }
+        Patient {
+            firstname
+            lastname
+            phone
+        }
+    }
+}
+`;
+
+interface ReserveQuery {
+  reserveId: string;
+  entryDate: string;
+  Service: { serviceId: string; profession: string }[];
+  Patient: { firstname: string; lastname: string; phone: number };
+}
+[];
+
+export default function App() {
+  const [tableLoading, settableLoading] = useState(true);
+  const [tableData, setTableData] = useState([]);
+
+  const raw = JSON.stringify({
+    query: GET_SERVICE,
+    operationName: 'Reserves',
+  });
+  const { isLoading, data } = useGraph(raw);
+
+  useEffect(() => {
+    settableLoading(isLoading);
+    if (!isLoading && data?.data?.Reserves) {
+      setTableData(data.data.Reserves);
+    }
+  }, [isLoading, data]);
+
+  return (
+    <div className='overflow-x-auto'>
+      {tableLoading ? (
+        <span className='loading loading-dots loading-lg'></span>
+      ) : (
+        <table className='table'>
+          <thead>
+            <tr>
+              <th>Reserve ID</th>
+              <th>Phone Number</th>
+              <th>Name</th>
+              <th>profession</th>
+              <th>Entry Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tableData.length > 0 ? (
+              tableData.map((user: ReserveQuery) => (
+                <tr key={user.reserveId}>
+                  <td>{user.reserveId}</td>
+                  <td>
+                    <a href={`tel:${user.Patient.phone.toString()}`}>{user.Patient.phone.toString()}</a>
+                  </td>
+                  <td>
+                    <div className='flex items-center gap-3'>
+                      <div>
+                        <div className='font-bold'>{user.Patient.firstname}</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>{user.Service[0].profession}</td>
+                  <td>{`${new Date(user.entryDate)}`}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan='4'>No data found</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      )}
+    </div>
+  );
+}

@@ -1,0 +1,8 @@
+# Ignore artifacts:
+build
+coverage
+prisma
+node_modules
+.million
+.next
+__test__
