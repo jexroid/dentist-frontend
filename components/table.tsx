@@ -17,8 +17,10 @@ const users = [
 ];
 
 import React, { useEffect, useState } from 'react';
+import jalaali from 'jalaali-js';
 
 import { useGraph } from '@/lib/graphRequest';
+import InfoIcon from './icon/info';
 
 const GET_SERVICE = `
   query Reserves {
@@ -71,11 +73,24 @@ export default function App() {
         <table className='table'>
           <thead>
             <tr>
-              <th>Reserve ID</th>
-              <th>Phone Number</th>
-              <th>Name</th>
-              <th>profession</th>
-              <th>Entry Date</th>
+              <th className='text-black dark:text-white'>
+                <p>ایدی</p>
+              </th>
+              <th className='text-black dark:text-white'>
+                <p>شماره</p>
+              </th>
+              <th className='text-black dark:text-white'>
+                <p>نام و نام خانوادگی</p>
+              </th>
+              <th className='text-black dark:text-white'>
+                <p>سرویس</p>
+              </th>
+              <th className='text-black dark:text-white'>
+                <p>تاریخ رزور</p>
+              </th>
+              <th className='text-black dark:text-white'>
+                <p>اقدام</p>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -89,12 +104,19 @@ export default function App() {
                   <td>
                     <div className='flex items-center gap-3'>
                       <div>
-                        <div className='font-bold'>{user.Patient.firstname}</div>
+                        <div className='font-bold'>
+                          {user.Patient.firstname} {user.Patient.lastname}
+                        </div>
                       </div>
                     </div>
                   </td>
                   <td>{user.Service[0].profession}</td>
-                  <td>{`${new Date(user.entryDate)}`}</td>
+                  <td>{`${new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'short', timeStyle: 'medium' }).format(new Date(user.entryDate))}`}</td>
+                  <td>
+                    <a href={`/${user.reserveId}`}>
+                      <InfoIcon />
+                    </a>
+                  </td>
                 </tr>
               ))
             ) : (
