@@ -73,24 +73,12 @@ export default function App() {
         <table className='table'>
           <thead>
             <tr>
-              <th className='text-black dark:text-white'>
-                <p>ایدی</p>
-              </th>
-              <th className='text-black dark:text-white'>
-                <p>شماره</p>
-              </th>
-              <th className='text-black dark:text-white'>
-                <p>نام و نام خانوادگی</p>
-              </th>
-              <th className='text-black dark:text-white'>
-                <p>سرویس</p>
-              </th>
-              <th className='text-black dark:text-white'>
-                <p>تاریخ رزور</p>
-              </th>
-              <th className='text-black dark:text-white'>
-                <p>اقدام</p>
-              </th>
+              <th className='text-black dark:text-white'>ایدی</th>
+              <th className='text-black dark:text-white'>شماره</th>
+              <th className='text-black dark:text-white'>نام و نام خانوادگی</th>
+              <th className='text-black dark:text-white'>سرویس</th>
+              <th className='text-black dark:text-white'>تاریخ رزور</th>
+              <th className='text-black dark:text-white'>اقدام</th>
             </tr>
           </thead>
           <tbody>
@@ -111,7 +99,7 @@ export default function App() {
                     </div>
                   </td>
                   <td>{user.Service[0].profession}</td>
-                  <td>{`${new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'short', timeStyle: 'medium' }).format(new Date(user.entryDate))}`}</td>
+                  <td>{`${new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date(user.entryDate))}`}</td>
                   <td>
                     <a href={`/${user.reserveId}`}>
                       <InfoIcon />
