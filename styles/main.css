@@ -13,13 +13,14 @@
 /* Fonts */
 
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Montserrat",  sans-serif;
-  --nav-font: "Raleway",  sans-serif;
+  --default-font: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --heading-font: 'Montserrat', sans-serif;
+  --nav-font: 'Raleway', sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #2b180d; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #1b2f45; /* Color for headings, subheadings and title throughout the website */
@@ -30,7 +31,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.6);  /* The default color of the main navmenu links */
+  --nav-color: rgba(255, 255, 255, 0.6); /* The default color of the main navmenu links */
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -58,8 +59,8 @@
   scroll-behavior: smooth;
 }
 
-*{
- text-align: end;
+* {
+  text-align: end;
 }
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
@@ -124,7 +125,7 @@ h6 {
 }
 
 .php-email-form .loading:before {
-  content: "";
+  content: '';
   display: inline-block;
   border-radius: 50%;
   width: 24px;
@@ -181,7 +182,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color:#2c629c;
+  --background-color: #2c629c;
 }
 
 /*--------------------------------------------------------------
@@ -231,7 +232,7 @@ h6 {
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -270,11 +271,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -286,7 +287,7 @@ h6 {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -413,16 +414,16 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown > .dropdow {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
 
-  .mobile-nav-active {
+  .mobile-na {
     overflow: hidden;
   }
 
-  .mobile-nav-active .mobile-nav-toggle {
+  .mobile-na .mobile-nav-toggle {
     color: #fff;
     position: absolute;
     font-size: 32px;
@@ -432,7 +433,7 @@ h6 {
     z-index: 9999;
   }
 
-  .mobile-nav-active .navmenu {
+  .mobile-na .navmenu {
     position: fixed;
     overflow: hidden;
     inset: 0;
@@ -440,7 +441,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-na .navmenu > ul {
     display: block;
   }
 }
@@ -638,7 +639,7 @@ body {
 }
 
 #preloader:before {
-  content: "";
+  content: '';
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
@@ -717,7 +718,7 @@ body {
 }
 
 .page-title:before {
-  content: "";
+  content: '';
   background-color: color-mix(in srgb, var(--background-color), transparent 40%);
   position: absolute;
   inset: 0;
@@ -744,12 +745,12 @@ body {
   font-weight: 400;
 }
 
-.page-title .breadcrumbs ol li+li {
+.page-title .breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.page-title .breadcrumbs ol li+li::before {
-  content: "/";
+.page-title .breadcrumbs ol li + li::before {
+  content: '/';
   display: inline-block;
   padding-right: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 70%);
@@ -768,7 +769,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 66px;
@@ -793,7 +793,7 @@ section,
 }
 
 .section-title h2:after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   width: 50px;
@@ -824,9 +824,14 @@ section,
 @media (min-width: 1200px) {
   .hero:after {
     position: absolute;
-    content: "";
+    content: '';
     width: 44%;
-    background-image: linear-gradient(180deg, color-mix(in srgb, var(--background-color), transparent 15%), color-mix(in srgb, var(--background-color), transparent 15%) 100%), linear-gradient(180deg, rgb(0, 0, 0), rgb(0, 0, 0) 100%);
+    background-image: linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--background-color), transparent 15%),
+        color-mix(in srgb, var(--background-color), transparent 15%) 100%
+      ),
+      linear-gradient(180deg, rgb(0, 0, 0), rgb(0, 0, 0) 100%);
     top: 0;
     bottom: 0;
     z-index: 2;
@@ -835,7 +840,7 @@ section,
 
 .hero:before {
   position: absolute;
-  content: "";
+  content: '';
   background: color-mix(in srgb, var(--background-color), transparent 40%);
   inset: 0;
   z-index: 2;
@@ -927,7 +932,6 @@ section,
 # Why Us Section
 --------------------------------------------------------------*/
 .why-us .img-bg {
-  min-height: 500px;
   position: relative;
 }
 
@@ -957,12 +961,12 @@ section,
 }
 
 .why-us .swiper {
-  margin: 140px 140px 120px 140px;
   overflow: hidden;
 }
 
-.why-us .swiper-wrapper {
-  height: auto;
+.swiper {
+  width: 50rem;
+  border-radius: 50px;
 }
 
 .why-us .swiper-button-prev:after,
@@ -971,42 +975,16 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
 
-.why-us .swiper-button-prev {
-  left: 80px;
-}
-
-.why-us .swiper-button-next {
-  right: 80px;
-}
-
-.why-us .swiper-pagination {
-  margin-top: 30px;
+.why-us {
   position: relative;
 }
 
-.why-us .swiper-pagination .swiper-pagination-bullet {
+.why-us {
   background-color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
 
-.why-us .swiper-pagination .swiper-pagination-bullet-active {
+.why-us {
   background-color: var(--accent-color);
-}
-
-@media (max-width: 1200px) {
-  .why-us .swiper {
-    margin: 60px 60px 40px 60px;
-  }
-
-  .why-us .swiper-button-prev,
-  .why-us .swiper-button-next {
-    display: none;
-  }
-}
-
-@media (max-width: 575px) {
-  .why-us .swiper {
-    margin: 40px 40px 20px 40px;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -1087,7 +1065,7 @@ section,
 }
 
 .call-to-action:before {
-  content: "";
+  content: '';
   background: color-mix(in srgb, var(--background-color), transparent 50%);
   position: absolute;
   inset: 0;
@@ -1388,23 +1366,7 @@ section,
   margin: 0 auto 15px auto;
 }
 
-.testimonials .swiper-wrapper {
-  height: auto;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-  opacity: 1;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+.testimonials {
   background-color: var(--accent-color);
 }
 
@@ -1413,11 +1375,11 @@ section,
 }
 
 @media (max-width: 1199px) {
-  .testimonials .swiper-slide-active {
+  .testimonials .swiper-slid {
     opacity: 1;
   }
 
-  .testimonials .swiper-pagination {
+  .testimonials {
     margin-top: 0;
   }
 
@@ -1442,7 +1404,7 @@ section,
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
 }
 
-.service-details .service-box+.service-box {
+.service-details .service-box + .service-box {
   margin-top: 30px;
 }
 
@@ -1462,7 +1424,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   background-color: color-mix(in srgb, var(--default-color), transparent 96%);
   display: flex;
-  align-items:start;
+  align-items: start;
   padding: 12px 15px;
   margin-top: 15px;
   transition: 0.3s;
@@ -1495,7 +1457,7 @@ section,
 .service-details .download-catalog a {
   color: var(--default-color);
   display: flex;
-  align-items:left;
+  align-items: left;
   padding: 10px 0;
   transition: 0.3s;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -1591,7 +1553,7 @@ section,
 }
 
 .portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
+.portfolio .portfolio-filters li.filte {
   color: var(--accent-color);
 }
 
@@ -1672,19 +1634,19 @@ section,
   width: 100%;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination {
+.portfolio-details .portfolio-details-slider {
   margin-top: 20px;
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details .portfolio-details-slider {
   width: 12px;
   height: 12px;
   background-color: color-mix(in srgb, var(--default-color), transparent 85%);
   opacity: 1;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details .portfolio-details-slider {
   background-color: var(--accent-color);
 }
 
@@ -1708,7 +1670,7 @@ section,
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -1802,7 +1764,7 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact {
-  background-image: url("/img/contact-bg.png");
+  background-image: url('/img/contact-bg.png');
   background-position: left center;
   background-repeat: no-repeat;
   position: relative;
@@ -1816,7 +1778,7 @@ section,
 }
 
 .contact:before {
-  content: "";
+  content: '';
   background: color-mix(in srgb, var(--background-color), transparent 30%);
   position: absolute;
   bottom: 0;
@@ -1825,12 +1787,12 @@ section,
   right: 0;
 }
 
-.contact .info-item+.info-item {
+.contact .info-item + .info-item {
   margin-top: 40px;
 }
 
 #aimage {
-  background-image: url("/img/clinic1.jpeg")
+  background-image: url('/img/clinic1.jpeg');
 }
 
 .contact .info-item i {
@@ -1864,8 +1826,8 @@ section,
   height: 100%;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
+.contact .php-email-form input[type='text'],
+.contact .php-email-form input[type='email'],
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
@@ -1876,19 +1838,19 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type='text']:focus,
+.contact .php-email-form input[type='email']:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form input[type='text']::placeholder,
+.contact .php-email-form input[type='email']::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type='submit'] {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
@@ -1897,7 +1859,7 @@ section,
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type='submit']:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
@@ -2052,7 +2014,7 @@ section,
 }
 
 .blog-details .content blockquote:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -2077,7 +2039,7 @@ section,
   margin: 0;
 }
 
-.blog-details .meta-top ul li+li {
+.blog-details .meta-top ul li + li {
   padding-left: 20px;
 }
 
@@ -2136,10 +2098,10 @@ section,
   display: inline-block;
 }
 
-.blog-details .meta-bottom .tags li+li::before {
+.blog-details .meta-bottom .tags li + li::before {
   padding-right: 6px;
   color: var(--default-color);
-  content: ",";
+  content: ',';
 }
 
 .blog-details .meta-bottom .share {
@@ -2348,7 +2310,7 @@ section,
 }
 
 .widget-title:before {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   height: 2px;
@@ -2359,7 +2321,7 @@ section,
 }
 
 .widget-title:after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   width: 40px;
@@ -2385,7 +2347,7 @@ section,
   transition: 0.3s;
 }
 
-.search-widget form input[type=text] {
+.search-widget form input[type='text'] {
   border: 0;
   padding: 4px;
   border-radius: 4px;
@@ -2394,7 +2356,7 @@ section,
   color: var(--default-color);
 }
 
-.search-widget form input[type=text]:focus {
+.search-widget form input[type='text']:focus {
   outline: none;
 }
 
@@ -2495,7 +2457,6 @@ section,
 
 .tags-widget {
   margin-bottom: -10px;
-  
 }
 
 .tags-widget ul {
@@ -2506,7 +2467,6 @@ section,
 
 .tags-widget ul li {
   display: inline-block;
-  
 }
 
 .tags-widget ul a {
@@ -2529,5 +2489,21 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
-  
+}
+
+/*  custome stuff */
+
+.flexi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.flexi-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  gap: 30px;
 }

@@ -283,8 +283,6 @@ export default function GeneralLayout({ children }: { children: React.ReactNode 
       <a className='scroll-top d-flex align-items-center justify-content-center' href='/' id='scroll-top'>
         <i className='bi bi-arrow-up-short' />
       </a>
-      {/* Preloader */}
-      <div id='preloader' />
       <Script src='/vendor/bootstrap/js/bootstrap.bundle.min.js' />
       <Script src='/vendor/php-email-form/validate.js' />
       <Script src='/vendor/aos/aos.js' />

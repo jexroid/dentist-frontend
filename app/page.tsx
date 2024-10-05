@@ -1,6 +1,5 @@
 import Script from 'next/script';
 
-
 import GeneralLayout from './GeneralLayout';
 
 import { images } from '@/lib/images';
@@ -39,9 +38,13 @@ export default function Home() {
         </section>
         {/* /Hero Section */}
         {/* Why Us Section */}
-        <section className='why-us section' id='why-us'>
-          <div className='container'>
+        <section className='why-us section bg-white flex justify-center items-center' id='why-us'>
+          <div className='container flexi py-3'>
             <Slider />
+            <div className='flexi-top' data-aos='fade-up'>
+              <h3>ارتودنسی</h3>
+              <p>هرچیزی که از دندان های خود انتظار دارید را به ما بسپپارید</p>
+            </div>
           </div>
         </section>
         {/* /Why Us Section */}
