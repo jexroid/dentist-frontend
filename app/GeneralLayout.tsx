@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 
 import { siteConfig } from '@/config/site';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: {
@@ -43,7 +44,7 @@ export default function GeneralLayout({ children }: { children: React.ReactNode 
                 <a href='portfolio.html'>گالری واینستاگرام</a>
               </li>
               <li>
-                <a href='blog.html'>بلاگ </a>
+                <Link href='blog'>بلاگ </Link>
               </li>
               <li className='dropdown'>
                 <a href='/'>
