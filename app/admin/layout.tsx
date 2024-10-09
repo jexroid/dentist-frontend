@@ -5,9 +5,8 @@ import clsx from 'clsx';
 
 import { Providers } from '../providers';
 
-import { siteConfig } from '@/config/site';
+// import { siteConfig } from '@/config/site';
 import { Navbar } from '@/components/navbar';
-
 
 export const viewport: Viewport = {
   themeColor: [

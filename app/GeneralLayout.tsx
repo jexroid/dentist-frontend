@@ -1,6 +1,5 @@
 import '@/styles/main.css';
 import { Metadata } from 'next';
-import clsx from 'clsx';
 import Script from 'next/script';
 
 import { siteConfig } from '@/config/site';
@@ -47,16 +46,16 @@ export default function GeneralLayout({ children }: { children: React.ReactNode 
                 <a href='blog.html'>بلاگ </a>
               </li>
               <li className='dropdown'>
-                <a href='#'>
+                <a href='/'>
                   <span>انتخاب زبان </span>
-                  <i className='bi bi-chevron-down toggle-dropdown'></i>
+                  <i className='bi bi-chevron-down toggle-dropdown' />
                 </a>
                 <ul>
-                  <a href='#'>
+                  <a href='/'>
                     <img alt='Persian' className='flag-icon' src='/img/iran.png' />
                     فارسی
                   </a>
-                  <a href='#'>
+                  <a href='/'>
                     <img alt='English' className='flag-icon' src='/img/england.png' />
                     انگلیسی
                   </a>
@@ -66,7 +65,7 @@ export default function GeneralLayout({ children }: { children: React.ReactNode 
                 <a href='contact.html'>تماس باما</a>
               </li>
             </ul>
-            <i className='mobile-nav-toggle d-xl-none bi bi-list'></i>
+            <i className='mobile-nav-toggle d-xl-none bi bi-list' />
           </nav>
         </div>
       </header>
@@ -76,7 +75,7 @@ export default function GeneralLayout({ children }: { children: React.ReactNode 
       <link href='/vendor/aos/aos.css' rel='stylesheet' />
       <link href='/vendor/glightbox/css/glightbox.min.css' rel='stylesheet' />
       <link href='/vendor/swiper/swiper-bundle.min.css' rel='stylesheet' />
-      <link rel='stylesheet' href='https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css'></link>
+      <link href='https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css' rel='stylesheet' />
       <main className='main'>{children}</main>
       <footer className='footer-09'>
         <div className='container'>
@@ -128,54 +127,56 @@ export default function GeneralLayout({ children }: { children: React.ReactNode 
                 آخرین اخبار
               </h2>
               <div className='block-21 mb-4 d-flex'>
-                <a className='img mr-4 rounded' id='aimage' />
-                <div className='text'>
-                  <h3 className='heading'>
-                    <a href='/'>حتی قدرت‌مندترین نشانه هم کنترل ندارد</a>
-                  </h3>
-                  <div className='meta'>
-                    <div>
-                      <a href='/'>
-                        <span className='icon-calendar' /> 16 اکتبر 2019
-                      </a>
-                    </div>
-                    <div>
-                      <a href='/'>
-                        <span className='icon-person' /> ادمین
-                      </a>
-                    </div>
-                    <div>
-                      <a href='/'>
-                        <span className='icon-chat' /> 19
-                      </a>
+                <a className='img mr-4 rounded' href='/' id='aimage'>
+                  <div className='text'>
+                    <h3 className='heading'>
+                      <a href='/'>حتی قدرت‌مندترین نشانه هم کنترل ندارد</a>
+                    </h3>
+                    <div className='meta'>
+                      <div>
+                        <a href='/'>
+                          <span className='icon-calendar' /> 16 اکتبر 2019
+                        </a>
+                      </div>
+                      <div>
+                        <a href='/'>
+                          <span className='icon-person' /> ادمین
+                        </a>
+                      </div>
+                      <div>
+                        <a href='/'>
+                          <span className='icon-chat' /> 19
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div className='block-21 mb-4 d-flex'>
-                <a className='img mr-8 rounded' style={{ backgroundImage: 'url("./img/clinic2.jpeg")' }} />
-                <div className='text'>
-                  <h3 className='heading'>
-                    <a href='/'>Even dfgrdgg the about</a>
-                  </h3>
-                  <div className='meta'>
-                    <div>
-                      <a href='/'>
-                        <span className='icon-calendar' /> Oct. 16, 2019
-                      </a>
-                    </div>
-                    <div>
-                      <a href='/'>
-                        <span className='icon-person' /> Admin
-                      </a>
-                    </div>
-                    <div>
-                      <a href='/'>
-                        <span className='icon-chat' /> 19
-                      </a>
+                <a className='img mr-8 rounded' href='/' style={{ backgroundImage: 'url("./img/clinic2.jpeg")' }}>
+                  <div className='text'>
+                    <h3 className='heading'>
+                      <a href='/'>Even dfgrdgg the about</a>
+                    </h3>
+                    <div className='meta'>
+                      <div>
+                        <a href='/'>
+                          <span className='icon-calendar' /> Oct. 16, 2019
+                        </a>
+                      </div>
+                      <div>
+                        <a href='/'>
+                          <span className='icon-person' /> Admin
+                        </a>
+                      </div>
+                      <div>
+                        <a href='/'>
+                          <span className='icon-chat' /> 19
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
             {/* اطلاعات */}
@@ -229,34 +230,34 @@ export default function GeneralLayout({ children }: { children: React.ReactNode 
                   {/* تصویر اول */}
                   <div className='col-4'>
                     <a href='/' target='_blank'>
-                      <img alt='Instagram Image 1' className='img-fluid' src='./img/clinic1.jpeg' />
+                      <img alt='Instagram' className='img-fluid' src='./img/clinic1.jpeg' />
                     </a>
                   </div>
                   {/* تصویر دوم */}
                   <div className='col-4'>
                     <a href='/' target='_blank'>
-                      <img alt='Instagram Image 2' className='img-fluid' src='./img/clinic2.jpeg' />
+                      <img alt='Instagram' className='img-fluid' src='./img/clinic2.jpeg' />
                     </a>
                   </div>
                   <div className='col-4'>
                     <a href='/' target='_blank'>
-                      <img alt='Instagram Image 2' className='img-fluid' src='./img/clinic2.jpeg' />
+                      <img alt='Instagram' className='img-fluid' src='./img/clinic2.jpeg' />
                     </a>
                   </div>
                   <div className='col-4'>
                     <a href='/' target='_blank'>
-                      <img alt='Instagram Image 2' className='img-fluid' src='./img/clinic2.jpeg' />
+                      <img alt='Instagram' className='img-fluid' src='./img/clinic2.jpeg' />
                     </a>
                   </div>
                   <div className='col-4'>
                     <a href='/' target='_blank'>
-                      <img alt='Instagram Image 2' className='img-fluid' src='./img/clinic2.jpeg' />
+                      <img alt='Instagram' className='img-fluid' src='./img/clinic2.jpeg' />
                     </a>
                   </div>
                   {/* تصویر سوم */}
                   <div className='col-4'>
                     <a href='/' target='_blank'>
-                      <img alt='Instagram Image 3' className='img-fluid' src='./img/clinic2.jpeg' />
+                      <img alt='Instagram' className='img-fluid' src='./img/clinic2.jpeg' />
                     </a>
                   </div>
                 </div>

@@ -1,7 +1,6 @@
 import '@/styles/main.css';
 import { Metadata } from 'next';
 import clsx from 'clsx';
-import Script from 'next/script';
 
 import { siteConfig } from '@/config/site';
 
