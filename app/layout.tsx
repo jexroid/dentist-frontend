@@ -1,11 +1,8 @@
 import '@/styles/main.css';
 import { Metadata } from 'next';
 import clsx from 'clsx';
-<<<<<<< HEAD
 
 import { SuperTokensProvider } from './providers';
-=======
->>>>>>> 7fafe6bf178f2467ee240f64bdad87c382f93e78
 
 import { siteConfig } from '@/config/site';
 
