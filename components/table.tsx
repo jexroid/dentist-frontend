@@ -19,8 +19,9 @@ const users = [
 import React, { useEffect, useState } from 'react';
 import jalaali from 'jalaali-js';
 
-import { useGraph } from '@/lib/graphRequest';
 import InfoIcon from './icon/info';
+
+import { useGraph } from '@/lib/graphRequest';
 
 const GET_SERVICE = `
   query Reserves {
@@ -57,18 +58,21 @@ export default function App() {
     operationName: 'Reserves',
   });
   const { isLoading, data } = useGraph(raw);
+  const graphqlR: any = data;
 
   useEffect(() => {
     settableLoading(isLoading);
-    if (!isLoading && data?.data?.Reserves) {
-      setTableData(data.data.Reserves);
+    if (!isLoading && graphqlR?.data?.Reserves) {
+      setTableData(graphqlR.data.Reserves);
     }
   }, [isLoading, data]);
 
   return (
     <div className='overflow-x-auto'>
       {tableLoading ? (
-        <span className='loading loading-dots loading-lg'></span>
+        <div className='flex justify-center items-center'>
+          <span className='loading loading-dots loading-lg' />
+        </div>
       ) : (
         <table className='table'>
           <thead>
@@ -101,7 +105,7 @@ export default function App() {
                   <td>{user.Service[0].profession}</td>
                   <td>{`${new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date(user.entryDate))}`}</td>
                   <td>
-                    <a href={`/${user.reserveId}`}>
+                    <a href={`/admin/${user.reserveId}`}>
                       <InfoIcon />
                     </a>
                   </td>
@@ -109,7 +113,7 @@ export default function App() {
               ))
             ) : (
               <tr>
-                <td colSpan='4'>No data found</td>
+                <td>No data found</td>
               </tr>
             )}
           </tbody>

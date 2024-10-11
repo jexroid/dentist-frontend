@@ -37,9 +37,13 @@
 		"react": "18.3.1",
 		"react-dom": "18.3.1",
 		"react-fetch-hook": "^1.9.5",
+<<<<<<< HEAD
 		"supertokens-auth-react": "^0.47.1",
 		"supertokens-node": "^20.1.5",
 		"supertokens-web-js": "^0.13.1",
+=======
+		"sharp": "^0.33.5",
+>>>>>>> 7fafe6bf178f2467ee240f64bdad87c382f93e78
 		"swiper": "^11.1.14"
 	},
 	"devDependencies": {
