@@ -1,7 +1,8 @@
 import '@/styles/main.css';
 import { Metadata } from 'next';
 import clsx from 'clsx';
-import Script from 'next/script';
+
+import { SuperTokensProvider } from './providers';
 
 import { siteConfig } from '@/config/site';
 
@@ -20,9 +21,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html suppressHydrationWarning lang='fa'>
       <head />
-      <body className={clsx('min-h-screen bg-background font-sans antialiased')}>
-        <main className='main'>{children}</main>
-      </body>
+      <SuperTokensProvider>
+        <body className={clsx('min-h-screen bg-background font-sans antialiased')}>
+          <main className='main'>{children}</main>
+        </body>
+      </SuperTokensProvider>
     </html>
   );
 }
