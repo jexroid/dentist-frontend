@@ -10,7 +10,7 @@ export const backendConfig = (): TypeInput => {
     framework: 'custom',
     supertokens: {
       // https://try.supertokens.com is for demo purposes. Replace this with the address of your core instance (sign up on supertokens.com), or self host a core.
-      connectionURI: 'https://try.supertokens.com',
+      connectionURI: 'http://localhost:3567',
       // apiKey: <API_KEY(if configured)>,
     },
     appInfo,
