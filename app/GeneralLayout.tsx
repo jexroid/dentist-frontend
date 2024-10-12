@@ -23,7 +23,7 @@ export default function GeneralLayout({ children }: { children: React.ReactNode 
         <div className='container-fluid container-xl position-relative d-flex align-items-center justify-content-between'>
           <a className='logo d-flex align-items-center' href='index.html'>
             <img alt='لگو' src='/img/logo.png' />
-            <h1 className='sitename'>حیدری</h1>
+            <h1 className='sitename'>کلینیک</h1>
           </a>
 
           <nav className='navmenu' id='navmenu'>
@@ -38,7 +38,7 @@ export default function GeneralLayout({ children }: { children: React.ReactNode 
                 <a href='about.html'>درباه ما</a>
               </li>
               <li>
-                <a href='services.html'>رزرو</a>
+                <a href='/reserve'>رزرو</a>
               </li>
               <li>
                 <a href='portfolio.html'>گالری واینستاگرام</a>

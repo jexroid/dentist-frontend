@@ -1,23 +1,4 @@
-const users = [
-  {
-    reserveId: '',
-    entryDate: '',
-    Service: [
-      {
-        serviceId: '',
-        profession: '',
-      },
-    ],
-    Patient: {
-      firstname: '',
-      lastname: '',
-      phone: 0,
-    },
-  },
-];
-
 import React, { useEffect, useState } from 'react';
-import jalaali from 'jalaali-js';
 
 import InfoIcon from './icon/info';
 
@@ -113,7 +94,7 @@ export default function App() {
               ))
             ) : (
               <tr>
-                <td>No data found</td>
+                <td>اطلاعاتی وجود ندارد</td>
               </tr>
             )}
           </tbody>

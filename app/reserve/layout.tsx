@@ -1,3 +1,5 @@
+import '@mantine/core/styles.css';
+
 import Link from 'next/link';
 import Script from 'next/script';
 
@@ -21,7 +23,9 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
                 <a href='../Nova/about.html'>درباه ما</a>
               </li>
               <li>
-                <a href='../Nova//reserve'>رزرو</a>
+                <Link href='/reserve' className='active'>
+                  رزرو
+                </Link>
               </li>
               <li>
                 <a href='../Nova/portfolio.html'>گالری کلینیک ما</a>
@@ -30,9 +34,7 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
                 <a href='../Nova/contact.html'>تماس باما</a>
               </li>
               <li>
-                <Link className='active' href='/blog'>
-                  بلاگ
-                </Link>
+                <Link href='/blog'>بلاگ</Link>
               </li>
               <li className='dropdown'>
                 <a href='/'>
