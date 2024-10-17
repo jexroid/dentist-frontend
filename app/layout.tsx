@@ -1,4 +1,5 @@
 import '@/styles/main.css';
+import '@/styles/globals.css';
 import '@mantine/core/styles.css';
 
 import { Metadata } from 'next';

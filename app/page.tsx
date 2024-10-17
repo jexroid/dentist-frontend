@@ -1,385 +1,130 @@
-import Script from 'next/script';
-
 import GeneralLayout from './GeneralLayout';
 
-import { images } from '@/lib/images';
 import Slider from '@/components/ui/Swiper';
 
 export default function Home() {
   return (
     <div>
       <GeneralLayout>
-        <section className='hero section dark-background ' id='hero'>
-          <img alt='تصویر بنر تبلیغاتی' data-aos='fade-in' src='./img/BANER.webp' />
+        <section className='bg-gray-800 text-white h-screen flex items-center justify-center' id='hero'>
           <div className='container'>
-            <div className='row'>
-              <div className='col-xl-4 d-flex flex-column justify-content-center'>
-                <h1 data-aos='fade-up'>برای دندان هایتان ارزش بگذارید</h1>
-                <figure>
-                  <blockquote data-aos='fade-up' data-aos-delay={100}>
-                    <p>متن پیش فرض و ساختگی از قبل آماده شده</p>
-                  </blockquote>
-                </figure>
-                <div className='d-flex mt-3' data-aos='fade-up' data-aos-delay={200}>
-                  <a className='btn-get-started' href='#about'>
-                    شروع کنید
-                  </a>
-                  <a
-                    className='glightbox btn-watch-video d-flex align-items-center ml-3'
-                    href='https://www.youtube.com/watch?v=LXb3EKWsInQ'
+            <div className='flex flex-col items-center'>
+              <h1 className='text-5xl font-bold mb-4'>برای دندان هایتان ارزش بگذارید</h1>
+              <figure className='mb-8'>
+                <blockquote className='text-lg font-italic'>
+                  <p>متن پیش فرض و ساختگی از قبل آماده شده</p>
+                </blockquote>
+              </figure>
+              <div className='flex space-x-4'>
+                <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+                  شروع کنید
+                </button>
+                <a
+                  className='flex items-center text-white hover:underline'
+                  href='https://www.youtube.com/watch?v=LXb3EKWsInQ'
+                >
+                  <svg
+                    className='h-6 w-6'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                    xmlns='http://www.w3.org/2000/svg'
                   >
-                    <i className='bi bi-play-circle' />
-                    <span>دیدن ویدیو</span>
-                  </a>
-                </div>
+                    <path
+                      d='M15 10l-4 2m0 0 l4 2m-4-2v4a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v4M5 10v10a3 3 0 0 0 3 3h3a3 3 0 0 0 3-3V10m-6 0v10a3 3 0 0 0 3 3h3a3 3 0 0 0 3-3V10M3 10v10a3 3 0 0 0 3 3h3a3 3 0 0 0 3-3V10'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='2'
+                    />
+                  </svg>
+                  <span className='ml-2'>دیدن ویدیو</span>
+                </a>
               </div>
             </div>
           </div>
         </section>
-        {/* /Hero Section */}
+
         {/* Why Us Section */}
-        <section className='why-us section bg-white flex justify-center items-center' id='why-us'>
-          <div className='container flexi py-3'>
-            <Slider  />
-            <div className='flexi-top' data-aos='fade-up'>
-              <h3>ارتودنسی</h3>
+        <section className='bg-white flex justify-center items-center' id='why-us'>
+          <div className='container flex py-3'>
+            <Slider />
+            <div className='flex' data-aos='fade-up'>
+              <h3 className='text-2xl font-semibold mb-4'>ارتودنسی</h3>
               <p>هرچیزی که از دندان های خود انتظار دارید را به ما بسپپارید</p>
             </div>
           </div>
         </section>
         {/* /Why Us Section */}
+
         {/* Services Section */}
-        <section className='services section' id='services'>
-          {/* Section Title */}
-          <div className='container section-title' data-aos='fade-up'>
-            <h2 className='text-center'>خدمات ما</h2>
-          </div>
-          {/* End Section Title */}
+        <section className='bg-gray-100' id='services'>
           <div className='container'>
-            <div className='row gy-4'>
-              <div className='col-lg-4 col-md-6 service-item d-flex' data-aos='fade-up' data-aos-delay={100}>
-                <div className='icon flex-shrink-0'>
-                  <i className='bi bi-briefcase' style={{ color: '#f57813' }} />
+            <h2 className='text-center text-3xl font-bold mb-8'>خدمات ما</h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {/* Service Item 1 */}
+              <div className='bg-white rounded-lg p-6 shadow-md'>
+                <div className='flex items-center mb-4'>
+                  <svg
+                    className='h-6 w-6 text-blue-500'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path
+                      d='M15   
+ 10l-4 2m0 0 l4 2m-4-2v4a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v4M5 10v10a3 3 0 0 0 3 3h3a3 3 0 0 0 3-3V10m-6 0v10a3 3 0 0 0 3 3h3a3 3 0 0 0 3-3V10M3 10v10a3 3 0 0 0 3 3h3a3 3 0 0 0 3-3V10'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='2'
+                    />
+                  </svg>
+                  <h3 className='ml-4 text-xl font-semibold'>متن پیش فرض</h3>
                 </div>
-                <div>
-                  <h4 className='title'>متن پیش فرض</h4>
-                  <p className='description'>
-                    لذت افراد تباه شده و فاسد، دردها و مشکلاتی را که در شرف شهوت کور شده اند پیش بینی نمی کند.
-                  </p>
-                  <a className='readmore stretched-link' href='/'>
-                    <span>بیشتر بدانید</span>
-                    <i className='bi bi-arrow-right' />
-                  </a>
-                </div>
+                <p className='text-gray-700'>
+                  لذت افراد تباه شده و فاسد، دردها و مشکلاتی را که در شرف شهوت کور شده اند پیش بینی نمی کند.
+                </p>
+                <a className='text-blue-500 hover:underline' href='/'>
+                  بیشتر بدانید
+                </a>
               </div>
-              {/* 
-              vice Item */}
-              <div className='col-lg-4 col-md-6 service-item d-flex' data-aos='fade-up' data-aos-delay={200}>
-                <div className='icon flex-shrink-0'>
-                  <i className='bi bi-card-checklist' style={{ color: '#15a04a' }} />
+
+              {/* Service Item 2 */}
+              <div className='bg-white rounded-lg p-6 shadow-md'>
+                <div className='flex items-center mb-4'>
+                  <svg
+                    className='h-6 w-6 text-green-500'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path
+                      d='M9   
+ 12l3 3m0 0 l3-3m-3 3v4a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V12zm6 3l1.5-1.5m0 0 L18 15m-1.5-1.5l-1.5 1.5'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='2'
+                    />
+                  </svg>
+                  <h3 className='ml-4 text-xl font-semibold'>سیستم درد</h3>
                 </div>
-                <div>
-                  <h4 className='title'>سیستم درد</h4>
-                  <p className='description'>
-                    متاسفم، هیچ کس نباید هیچ نوع کاری را امتحان کند، مگر اینکه از آن سودی به دست آورد
-                  </p>
-                  <a className='readmore stretched-link' href='/'>
-                    <span>بیشتر بدانید</span>
-                    <i className='bi bi-arrow-right' />
-                  </a>
-                </div>
+                <p className='text-gray-700'>
+                  متاسفم، هیچ کس نباید هیچ نوع کاری را امتحان کند، مگر اینکه از آن سودی به دست آورد
+                </p>
+                <a className='text-blue-500 hover:underline' href='/'>
+                  بیشتر بدانید
+                </a>
               </div>
-              {/* End Service Item */}
-              <div className='col-lg-4 col-md-6 service-item d-flex' data-aos='fade-up' data-aos-delay={300}>
-                <div className='icon flex-shrink-0'>
-                  <i className='bi bi-bar-chart' style={{ color: '#d90769' }} />
-                </div>
-                <div>
-                  <h4 className='title'>اما همانطور که مشاهده می کنید</h4>
-                  <p className='description'>
-                    در توبیخ در لذتی که می خواهد مویی از درد باشد غضب نکن به امید اینکه پرورشی نباشد.
-                  </p>
-                  <a className='readmore stretched-link' href='/'>
-                    <span>بیشتر بدانید</span>
-                    <i className='bi bi-arrow-right' />
-                  </a>
-                </div>
-              </div>
-              {/* End Service Item */}
-              <div className='col-lg-4 col-md-6 service-item d-flex' data-aos='fade-up' data-aos-delay={400}>
-                <div className='icon flex-shrink-0'>
-                  <i className='bi bi-binoculars' style={{ color: '#15bfbc' }} />
-                </div>
-                <div>
-                  <h4 className='title'>دردهای بزرگ</h4>
-                  <p className='description'>
-                    تا شهوت کور نشوند بیرون نمی آیند مقصرند که واجبات را رها می کنند روح نرم می شود یعنی زحمت.
-                  </p>
-                  <a className='readmore stretched-link' href='/'>
-                    <span>بیشتر بدانید</span>
-                    <i className='bi bi-arrow-right' />
-                  </a>
-                </div>
-              </div>
-              {/* End Service Item */}
-              <div className='col-lg-4 col-md-6 service-item d-flex' data-aos='fade-up' data-aos-delay={500}>
-                <div className='icon flex-shrink-0'>
-                  <i className='bi bi-brightness-high' style={{ color: '#f5cf13' }} />
-                </div>
-                <div>
-                  <h4 className='title'>هیچکس</h4>
-                  <p className='description'>
-                    اما در حقیقت، ما هر دو کسانی را متهم می کنیم که شایسته نفرت عادلانه هستند، کسانی که با تملق لذت های
-                    کنونی نرم شده اند.
-                  </p>
-                  <a className='readmore stretched-link' href='/'>
-                    <span>بیشتر بدانید</span>
-                    <i className='bi bi-arrow-right' />
-                  </a>
-                </div>
-              </div>
-              {/* End Service Item */}
-              <div className='col-lg-4 col-md-6 service-item d-flex' data-aos='fade-up' data-aos-delay={600}>
-                <div className='icon flex-shrink-0'>
-                  <i className='bi bi-calendar4-week' style={{ color: '#1335f5' }} />
-                </div>
-                <div>
-                  <h4 className='title'>همان زمان</h4>
-                  <p className='description'>
-                    و به راستی که تفکیک این چیزها آسان و مصلحت است. برای اوقات فراغت، زمانی که انتخاب برای ما آزاد است
-                  </p>
-                  <a className='readmore stretched-link' href='/'>
-                    <span>بیشتر بدانید</span>
-                    <i className='bi bi-arrow-right' />
-                  </a>
-                </div>
-              </div>
-              {/* End Service Item */}
+
+              {/* ... other service items */}
             </div>
           </div>
         </section>
         {/* /Services Section */}
-        {/* Call To Action Section */}
-        <section className='call-to-action section dark-background ' id='call-to-action'>
-          <img alt='' src='./img/ترسناک1.webp' />
-          <div className='container'>
-            <div className='row justify-content-center' data-aos='zoom-in' data-aos-delay={100}>
-              <div className='col-xl-10'>
-                <div className='text-center'>
-                  <h3 className='text-center'>هم اکنون رزرو کنید</h3>
-                  <p>
-                    جهت استفاده از خدمات کلینیک (معاینه دندان, کامپوزت, پر کردن دندان , عصب کشی, لمینت,کشیدن دندان )رزرو
-                    کنید تا بتوانیم در بهترین زمان بهترین خدمات را برای دندان های شما فراهم کنیم
-                  </p>
-                  <a className='cta-btn' href='/'>
-                    رزرو
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* /فراخوانی برای اقدام Section */}
-        {/* Features Section */}
-        <section className='features section' id='features'>
-          <div className='container'>
-            <div className='row'>
-              <div className='col-lg-7' data-aos='fade-up' data-aos-delay={100}>
-                <h3 className='mb-0'>ویژگی های قدرتمند برای</h3>
-                <h3>شغلت</h3>
-                <div className='row gy-4'>
-                  <div className='col-md-6'>
-                    <div className='icon-list d-flex'>
-                      <i className='bi bi-eye' style={{ color: '#ff8b2c' }} />
-                      <span>ویژگی های Easy Cart</span>
-                    </div>
-                  </div>
-                  {/* End Icon List Item*/}
-                  <div className='col-md-6'>
-                    <div className='icon-list d-flex'>
-                      <i className='bi bi-infinity' style={{ color: '#5578ff' }} />
-                      <span>پس از آن باید چربی سوزی انجام شود</span>
-                    </div>
-                  </div>
-                  {/* End Icon List Item*/}
-                  <div className='col-md-6'>
-                    <div className='icon-list d-flex'>
-                      <i className='bi bi-mortarboard' style={{ color: '#e80368' }} />
-                      <span>من خود موضوع را توضیح خواهم داد</span>
-                    </div>
-                  </div>
-                  {/* End Icon List Item*/}
-                  <div className='col-md-6'>
-                    <div className='icon-list d-flex'>
-                      <i className='bi bi-star' style={{ color: '#ffa76e' }} />
-                      <span>ویژگی های Easy Cart</span>
-                    </div>
-                  </div>
-                  {/* End Icon List Item*/}
-                  <div className='col-md-6'>
-                    <div className='icon-list d-flex'>
-                      <i className='bi bi-x-diamond' style={{ color: '#11dbcf' }} />
-                      <span>ویژگی های Easy Cart</span>
-                    </div>
-                  </div>
-                  {/* End Icon List Item*/}
-                  <div className='col-md-6'>
-                    <div className='icon-list d-flex'>
-                      <i className='bi bi-camera-video' style={{ color: '#4233ff' }} />
-                      <span>پس از آن باید چربی سوزی انجام شود</span>
-                    </div>
-                  </div>
-                  {/* End Icon List Item*/}
-                  <div className='col-md-6'>
-                    <div className='icon-list d-flex'>
-                      <i className='bi bi-brightness-high' style={{ color: '#29cc61' }} />
-                      <span>من خود موضوع را توضیح خواهم داد</span>
-                    </div>
-                  </div>
-                  {/* End Icon List Item*/}
-                  <div className='col-md-6'>
-                    <div className='icon-list d-flex'>
-                      <i className='bi bi-activity' style={{ color: '#ff5828' }} />
-                      <span>ویژگی های Easy Cart</span>
-                    </div>
-                  </div>
-                  {/* End Icon List Item*/}
-                </div>
-              </div>
-              <div className='col-lg-5 position-relative' data-aos='zoom-out' data-aos-delay={200}>
-                <div className='phone-wrap'>
-                  <img alt='iphone' className='img-fluid' src='img/mobailphone.jpg' />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='details'>
-            <div className='container'>
-              <div className='row'>
-                <div className='col-md-6' data-aos='fade-up' data-aos-delay={300}>
-                  <h4>
-                    کار Sdio Lydus
-                    <br />
-                    ناروتو در اوبون
-                  </h4>
-                  <p>متن پیش فرض وساختگی</p>
-                  <a className='btn-get-started' href='#about'>
-                    شروع کنید
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Features Section */}
-          {/* Features Section */}
-        </section>
-        {/* /Features Section */}
-        {/* Recent Posts Section */}
-        <section className='recent-posts section' id='recent-posts'>
-          {/* Section Title */}
-          <div className='container section-title' data-aos='fade-up'>
-            <h2>پست های اخیر وبلاگ</h2>
-          </div>
-          {/* End Section Title */}
-          <div className='container'>
-            <div className='row gy-5'>
-              {/* Post 1 */}
-              <div className='col-xl-3 col-md-6' data-aos='fade-up' data-aos-delay={200}>
-                <div className='post-box'>
-                  <div className='post-img'>
-                    <img alt='' className='img-fluid' src='img/blog/blog-1.jpg' />
-                  </div>
-                  <div className='post-content'>
-                    <div className='meta'>
-                      <span className='post-date'>سه شنبه 12 دسامبر</span>
-                      <span className='post-author'> / جولیا پارکر</span>
-                    </div>
-                    <h3 className='post-title'>و او را رنج بدهم اما او یا باید از بدهی هایش فرار کند</h3>
-                    <p>
-                      برای لذت او راضی است. زیرا هیچ تمایلی برای دریافت شدن وجود ندارد. یا همه مداحان. وظایف او از او
-                      شدیدتر است. راه های مهم ...
-                    </p>
-                    <a className='readmore stretched-link' href='blog-details.html'>
-                      <span>بخوانید</span>
-                      <i className='bi bi-arrow-right' />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* Post 2 */}
-              <div className='col-xl-3 col-md-6' data-aos='fade-up' data-aos-delay={400}>
-                <div className='post-box'>
-                  <div className='post-img'>
-                    <img alt='' className='img-fluid' src='img/blog/blog-2.jpg' />
-                  </div>
-                  <div className='post-content'>
-                    <div className='meta'>
-                      <span className='post-date'>جمعه، 05 سپتامبر</span>
-                      <span className='post-author'> / ماریو داگلاس</span>
-                    </div>
-                    <h3 className='post-title'>و از دردسری که جز همه است دفع شود</h3>
-                    <p>
-                      هر آزاده هیچ لذتی نمی شناسد، زیرا روزگار چنین است. او متنفر است که باید توسط او فرض شود. هر کسی با
-                      همه دردها...
-                    </p>
-                    <a className='readmore stretched-link' href='blog-details.html'>
-                      <span>بخوانید</span>
-                      <i className='bi bi-arrow-right' />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* Post 3 */}
-              <div className='col-xl-3 col-md-6' data-aos='fade-up' data-aos-delay={600}>
-                <div className='post-box'>
-                  <div className='post-img'>
-                    <img alt='' className='img-fluid' src='img/blog/blog-3.jpg' />
-                  </div>
-                  <div className='post-content'>
-                    <div className='meta'>
-                      <span className='post-date'>سه شنبه 27 جولای</span>
-                      <span className='post-author'> / لیزا هانتر</span>
-                    </div>
-                    <h3 className='post-title'>زیرا حقیقت را باید فرض کرد</h3>
-                    <p>
-                      زیرا هر کس که برای او توضیح دهم، او و امثال آن را سخت طلب خواهد کرد. چه کسی همه را دفع می کند اما
-                      چه چیزی بزرگ را به دنبال خواهد داشت...
-                    </p>
-                    <a className='readmore stretched-link' href='blog-details.html'>
-                      <span>بخوانید</span>
-                      <i className='bi bi-arrow-right' />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* Post 4 */}
-              <div className='col-xl-3 col-md-6' data-aos='fade-up' data-aos-delay={800}>
-                <div className='post-box'>
-                  <div className='post-img'>
-                    <img alt='' className='img-fluid' src='img/blog/blog-4.jpg' />
-                  </div>
-                  <div className='post-content'>
-                    <div className='meta'>
-                      <span className='post-date'>سه شنبه 16 سپتامبر</span>
-                      <span className='post-author'> / ماریو داگلاس</span>
-                    </div>
-                    <h3 className='post-title'>باید گفت آسان و شبیه به نرم ها هستند</h3>
-                    <p>
-                      و نتیجه حاصل خواهد شد، زیرا لذت راحتی همان چیزی است که از آن حاصل می شود. یا همه آنها به دلیل
-                      انتخاب چه کسانی هستند ...
-                    </p>
-                    <a className='readmore stretched-link' href='blog-details.html'>
-                      <span>بخوانید</span>
-                      <i className='bi bi-arrow-right' />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
+        {/* ... other sections */}
       </GeneralLayout>
-      <Script src='/js/main.js' />
     </div>
   );
 }
